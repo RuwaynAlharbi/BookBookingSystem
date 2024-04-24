@@ -41,6 +41,44 @@ public class BookBookingSystem {
         // Make a booking for a book
         Booking booking1 = new Booking(customer1, book1);
         System.out.println("Booking made: " + booking1.getCustomer().getName() + " has booked " + booking1.getBook().getTitle());
+          
+        int num;
+        CloneFactory WorkDay= new CloneFactory();   
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("King Fahad Library");
+        System.out.println("1-In Jeddah\n2-In Riyadh");
+        num= scanner.nextInt();
+
+        switch(num){
+            case 1:
+                
+               LibraryINJeddah Jeddah= new LibraryINJeddah();
+                LibraryINJeddah ClonedWeekend=(LibraryINJeddah) WorkDay.getClone(Jeddah);
+                System.out.println(Jeddah);
+               
+               
+                
+            
+                break;
+                
+            case 2:
+                
+                
+                LibraryINRiyadh Riyadh= new LibraryINRiyadh();
+                LibraryINRiyadh ClonedRiyadh=(LibraryINRiyadh) WorkDay.getClone(Riyadh);
+                System.out.println(Riyadh);
+               
+                
+                break;
+                
+            default:
+                System.out.println("Sorry you entered the wrong number");
+                break;
+        }
+
+        // Close the scanner
+        scanner.close();
+    
     }
 
     }
