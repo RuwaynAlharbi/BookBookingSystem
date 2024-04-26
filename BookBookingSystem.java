@@ -5,6 +5,9 @@
 package bookbookingsystem;
 
 import java.util.List;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -26,7 +29,7 @@ public class BookBookingSystem {
         Customer customer2 = new Customer("Jane Smith", "jane@example.com");
 
         // Create a library and add books to it
-        Library library = new Library();
+        Library library = Library.getInstance();
         library.addBook(book1);
         library.addBook(book2);
         library.addBook(book3);
