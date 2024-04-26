@@ -17,6 +17,13 @@ public class Library {
     public Library() {
         this.books = new ArrayList<>();
     }
+     
+	    public static Library getInstance() {
+	        if (instance == null) {
+	            instance = new Library();
+	        }
+	        return instance;
+	    }
 
     // Add a book to the library
     public void addBook(Book book) {
