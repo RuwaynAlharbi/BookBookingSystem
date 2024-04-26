@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class Library {
      private final List<Book> books;
+	private static Library instance;
 
     public Library() {
         this.books = new ArrayList<>();
